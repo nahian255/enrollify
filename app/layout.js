@@ -1,6 +1,7 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Link from "next/link";
+import { AntdRegistry } from '@ant-design/nextjs-registry';
+import Navbar from "./component/shared/Navbar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -13,14 +14,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
-        <nav>
-          <Link className="p-4" href={'/'}>Home</Link>
-          <Link href={'about'}>About</Link>
-          <Link href={'blog'}>Blog</Link>
-        </nav>
-        {children}
-        
-        
+        <Navbar></Navbar>
+        <AntdRegistry>
+          {children}
+          </AntdRegistry>
     </body>
     </html>
   );

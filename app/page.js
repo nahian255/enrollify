@@ -1,13 +1,11 @@
-import Image from "next/image";
 import Link from "next/link";
+import Extraa from "./component/shared/Extraa";
+import Navbar from "./component/shared/Navbar";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      
-    <Link href={'/home'}>Home page</Link>
-
-
-    </main>
+    <div>
+     
+    </div>
   );
 }
