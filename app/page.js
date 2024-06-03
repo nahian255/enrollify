@@ -1,11 +1,16 @@
-import Link from "next/link";
-import Extraa from "./component/shared/Extraa";
-import Navbar from "./component/shared/Navbar";
+
 
 export default function Home() {
   return (
     <div>
-     
+     <header>
+       <div>
+          <h1>text</h1>
+       </div>
+       <div>
+        img
+       </div>
+     </header>
     </div>
   );
 }
