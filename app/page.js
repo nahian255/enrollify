@@ -47,7 +47,7 @@ export default function Home() {
 
       {/* get start part */}
       <div className="bg-orange-200 my-10 md:flex h-80">
-        <div className="w-1/2"> 
+        <div className="w-1/2">
           img
         </div>
         <div className="bg-gray-200 w-1/2 content-center px-5" >
@@ -59,9 +59,22 @@ export default function Home() {
 
       {/*  pricing plan  */}
 
-      <div>
-      <h1 className="text-center text-4xl "> Gym pricing Plan</h1>
-        <p className="text-center "> lorem skjdljkkkkks       djkdjksjdskdj kjddj jddddddddddddskjdksjdksj     </p>
+      <div className=" py-5">
+        <h1 className="text-center text-4xl "> Gym pricing Plan</h1>
+        <p className="text-center py-5"> lorem skjdljkkkkks    djkdjksjdskdj kjddj jddddddddddddskjdksjdksj     </p>
+        <div className=" py-5 bg-lime-100">
+          <div className="md:flex justify-center gap-5">
+            <div className="bg-orange-200 h-40 w-1/4 ">
+              <h1>Regular member</h1>
+            </div>
+            <div className="bg-red-100 h-40 w-1/4">
+              <h1>Regular member</h1>
+            </div>
+            <div className="bg-orange-200 h-40 w-1/4">
+              <h1>Regular member</h1>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
