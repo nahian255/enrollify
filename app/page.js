@@ -45,6 +45,16 @@ export default function Home() {
         </div>
      </div>
        
+       {/* get start part */}
+       <div>
+        <div>
+          img
+        </div>
+        <div>
+          <h1> Ready to make a change </h1>
+          <p> something is writting hererj jfkj fsdio sjf oasjifsa ijf ojfso jsojf soj f s </p>
+        </div>
+       </div>
     </div>
   );
 }
