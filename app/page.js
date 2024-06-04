@@ -51,8 +51,8 @@ export default function Home() {
           img
         </div>
         <div className="bg-gray-200 w-1/2 content-center px-5" >
-          <h1 className="text-3xl pb-5"> Ready to make a change </h1>
-          <p className="pb-6"> something is writting hererj jfkj fsdio something is writting hererj jfkj fsdio sjf oasjifsa ijf ojfso jsojf soj f ssomething is writting hererj jfkj fsdio sjf oasjifsa ijf ojfso jsojf soj f s sjf oasjifsa ijf ojfso jsojf soj f s </p>
+          <h1 className=" text-4xl font-serif font-semibold "> Ready to make a <span className="text-purple-500">  change ?</span></h1>
+          <p className="py-6"> something is writting hererj jfkj fsdio something is writting hererj jfkj fsdio sjf oasjifsa ijf ojfso jsojf soj f ssomething is writting hererj jfkj fsdio sjf oasjifsa ijf ojfso jsojf soj f s sjf oasjifsa ijf ojfso jsojf soj f s </p>
           <Button></Button>
         </div>
       </div>
@@ -89,7 +89,7 @@ export default function Home() {
             </div>
             {/* pricing model 2 */}
             <div className="border-solid border-1 shadow-lg shadow-stone-400  rounded-lg md:w-1/4 ">
-              <div className="py-5 bg-purple-500 rounded-t-lg text-white">
+              <div className="py-5  bg-purple-500 rounded-t-lg text-white">
                 <h1 className="text-center text-2xl font-semibold">Premium member</h1>
                 <h3 className="text-center"> <span className="text-2xl font-bold">$70 </span>/mounth</h3>
               </div>
@@ -109,7 +109,7 @@ export default function Home() {
               </div>
             </div>
             {/* pricing model 3 */}
-            <div className="border-solid border-1 shadow-2xl md:w-1/4 ">
+            <div className="border-solid border-1 shadow-lg shadow-stone-400  rounded-lg md:w-1/4 ">
               <div className="py-5">
                 <h1 className="text-center text-2xl font-semibold">Stander member</h1>
                 <h3 className="text-center"> <span className="text-2xl font-bold">$100 </span>/mounth</h3>
