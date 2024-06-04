@@ -4,7 +4,7 @@ import { Container } from "postcss";
 
 export default function Home() {
   return (
-    <div>
+    <div className="px-8">
       {/* Header part  */}
       <header className=" md:flex ">
         <div className=" md:w-1/2 h-96 bg-red-100 content-center justify-items-center">
@@ -46,8 +46,8 @@ export default function Home() {
       </div>
 
       {/* get start part */}
-      <div className="bg-orange-200 my-10 md:flex h-80">
-        <div className="w-1/2">
+      <div className="py-10 md:flex md:h-80">
+        <div className="bg-orange-200 w-1/2">
           img
         </div>
         <div className="bg-gray-200 w-1/2 content-center px-5" >
@@ -60,22 +60,80 @@ export default function Home() {
       {/*  pricing plan  */}
 
       <div className=" py-5">
-        <h1 className="text-center text-4xl "> Gym pricing Plan</h1>
-        <p className="text-center py-5"> lorem skjdljkkkkks    djkdjksjdskdj kjddj jddddddddddddskjdksjdksj     </p>
-        <div className=" py-5 bg-lime-100">
+        <h1 className="text-center text-4xl font-serif font-semibold "> Gym <span className="text-purple-500"> pricing</span> Plan</h1>
+        <div className="flex justify-center ">
+          <p className="text-center text-sm py-5 w-1/2"> Briefly emphasize what sets your gym apart and why each tier offers good value. Focus on the benefits members receive, not just the features. Clearly display the monthly price for each membership tier.</p>
+        </div>
+        <div className=" py-5">
           <div className="md:flex justify-center gap-5">
-            <div className="bg-orange-200 h-40 w-1/4 ">
-              <h1>Regular member</h1>
+            {/* pricing model 1 */}
+            <div className="border-solid border-1 shadow-lg shadow-stone-400  rounded-lg md:w-1/4 ">
+              <div className="py-5">
+                <h1 className="text-center text-2xl font-semibold">Regular member</h1>
+                <h3 className="text-center"> <span className="text-2xl font-bold">$50 </span>/mounth</h3>
+              </div>
+              <hr className="border-t-1 border-purple-300"></hr>
+              <div className=" p-7">
+                <ul className="list-disc list-inside">
+                  <li>Unlimated access to the gym</li>
+                  <li>Customer Support</li>
+                  <li>Customer Support</li>
+                  <li>Customer Support</li>
+                  <li>Fesonal trainer</li>
+                  <li> 5 Classess per week </li>
+                </ul>
+              </div>
+              <div className="text-center pb-5">
+                <Button></Button>
+              </div>
             </div>
-            <div className="bg-red-100 h-40 w-1/4">
-              <h1>Regular member</h1>
+            {/* pricing model 2 */}
+            <div className="border-solid border-1 shadow-lg shadow-stone-400  rounded-lg md:w-1/4 ">
+              <div className="py-5 bg-purple-500 rounded-t-lg text-white">
+                <h1 className="text-center text-2xl font-semibold">Premium member</h1>
+                <h3 className="text-center"> <span className="text-2xl font-bold">$70 </span>/mounth</h3>
+              </div>
+              <hr></hr>
+              <div className=" p-7">
+                <ul className="list-disc list-inside">
+                  <li>Unlimated access to the gym</li>
+                  <li>Customer Support</li>
+                  <li>Customer Support</li>
+                  <li>Customer Support</li>
+                  <li>Fesonal trainer</li>
+                  <li> 5 Classess per week </li>
+                </ul>
+              </div>
+              <div className="text-center pb-5">
+                <Button></Button>
+              </div>
             </div>
-            <div className="bg-orange-200 h-40 w-1/4">
-              <h1>Regular member</h1>
+            {/* pricing model 3 */}
+            <div className="border-solid border-1 shadow-2xl md:w-1/4 ">
+              <div className="py-5">
+                <h1 className="text-center text-2xl font-semibold">Stander member</h1>
+                <h3 className="text-center"> <span className="text-2xl font-bold">$100 </span>/mounth</h3>
+              </div>
+              <hr className="border-t-1 border-purple-300"></hr>
+              <div className=" p-7">
+                <ul className="list-disc list-inside">
+                  <li>Unlimated access to the gym</li>
+                  <li>Customer Support</li>
+                  <li>Customer Support</li>
+                  <li>Customer Support</li>
+                  <li>Fesonal trainer</li>
+                  <li> 5 Classess per week </li>
+                </ul>
+              </div>
+              <div className="text-center pb-5">
+                <Button></Button>
+              </div>
             </div>
           </div>
         </div>
       </div>
+
+
     </div>
   );
 }
