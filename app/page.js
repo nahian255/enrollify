@@ -89,7 +89,7 @@ export default function Home() {
         <div className="py-5">
           <div className="md:flex justify-center gap-5">
             {/* Pricing model 1 */}
-            <div className="border-solid border-1 shadow-lg shadow-stone-400 rounded-lg md:w-1/4 hover:bg-purple-500 hover:text-white transition duration-300">
+            <div className="border-solid border-1 shadow-lg shadow-stone-400 rounded-lg md:w-1/4 hover:scale-105 duration-300 ease-in-out">
               <div className="py-5">
                 <h1 className="text-center text-2xl font-semibold">Regular Member</h1>
                 <h3 className="text-center">
@@ -112,7 +112,7 @@ export default function Home() {
               </div>
             </div>
             {/* Pricing model 2 */}
-            <div className="border-solid border-1 shadow-lg shadow-stone-400 rounded-lg md:w-1/4 hover:bg-purple-500 hover:text-white transition duration-300">
+            <div className="border-solid border-1 shadow-lg shadow-stone-400 rounded-lg md:w-1/4   hover:scale-105 duration-300 ease-in-out">
               <div className="py-5 bg-purple-500 rounded-t-lg text-white">
                 <h1 className="text-center text-2xl font-semibold">Premium Member</h1>
                 <h3 className="text-center">
@@ -135,7 +135,7 @@ export default function Home() {
               </div>
             </div>
             {/* Pricing model 3 */}
-            <div className="border-solid border-1 shadow-lg shadow-stone-400 rounded-lg md:w-1/4 hover:bg-purple-500 hover:text-white transition duration-300">
+            <div className="border-solid border-1 shadow-lg shadow-stone-400 rounded-lg md:w-1/4 hover:scale-105 duration-300 ease-in-out">
               <div className="py-5">
                 <h1 className="text-center text-2xl font-semibold">Standard Member</h1>
                 <h3 className="text-center">
