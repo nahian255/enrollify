@@ -2,6 +2,7 @@ import Button from "@/components/home/Button";
 import { Container } from "postcss";
 import img1 from "./../public/enrolify.jpg"
 import img2 from "@/public/fitness.jpg"
+import img3 from "@/public/fit-Icon.jpg"
 import Image from "next/image";
 
 export default function Home() {
@@ -20,35 +21,41 @@ export default function Home() {
       </header>
 
       {/*  benefits */}
-      <div className="bg-green-200 my-10">
-        <h1 className="text-center text-4xl "> Benefits of exercise</h1>
-        <p className="text-center "> lorem skjdljkkkkks       djkdjksjdskdj kjddj jddddddddddddskjdksjdksj     </p>
+      <div className=" mt-20 py-5">
+      <h1 className="text-center text-4xl font-serif font-semibold "> Benefits of  <span className="text-purple-500"> Exercise</span> </h1>
+      <div className="flex justify-center ">
+          <p className="text-center text-sm py-5 w-1/2"> Briefly emphasize what sets your gym apart and why each tier offers good value. Focus on the benefits members receive, not just the features. Clearly display the monthly price for each membership tier.</p>
+        </div>
         <div className="flex justify-center py-5">
-          <div className=" md:flex justify-evenly w-1/2 h-40 bg-purple-400">
-            <div className="content-center">
-              <h1> img </h1>
+          <div className=" md:flex justify-evenly w-4/5 h-40 bg-purple-500 rounded-xl">
+            <div className="content-center flex items-center gap-4 text-white">
+              <Image src={img3} width={60} ></Image>
               <div>
                 <h1> Healthy Life </h1>
+                <p className="text-sm"> sometingjkd kdjskjskj ossojfoi</p>
               </div>
             </div>
-            <div className="content-center">
-              <h1> img </h1>
+            <div className="content-center flex items-center gap-4 text-white">
+            <Image src={img3} width={60} ></Image>
               <div>
                 <h1> Healthy Life </h1>
+                <p className="text-sm"> sometingjkd kdjskjskj ossojfoi</p>
               </div>
             </div>
-            <div className="content-center">
-              <h1> img </h1>
+            <div className="content-center flex items-center gap-4 text-white">
+            <Image src={img3} width={60} ></Image>
               <div>
                 <h1> Healthy Life </h1>
+                <p className="text-sm"> sometingjkd kdjskjskj ossojfoi</p>
               </div>
             </div>
+            
           </div>
         </div>
       </div>
 
       {/* get start part */}
-      <div className="py-10 md:flex px-10">
+      <div className=" md:flex px-10">
         <div className=" w-1/2">
           <Image className="c" src={img2} height={260} width={500}></Image>
         </div>
