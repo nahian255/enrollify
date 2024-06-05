@@ -9,8 +9,8 @@ const Navbar = () => {
                 <h1>logo</h1>
                 <div>
                     <Link className="p-4" href={'/'}>Home</Link>
-                    <Link href={'about'}>About</Link>
                     <Link className="p-4" href={'course'}>course</Link>
+                    <Link href={'about'}>About</Link>
                     <Link className="p-" href={'blog'}>Blog</Link>
                 </div>
             </nav>
