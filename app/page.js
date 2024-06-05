@@ -1,6 +1,8 @@
 import Button from "@/components/home/Button";
 import { Container } from "postcss";
-
+import img1 from "./../public/enrolify.jpg"
+import img2 from "@/public/fitness.jpg"
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -46,11 +48,11 @@ export default function Home() {
       </div>
 
       {/* get start part */}
-      <div className="py-10 md:flex md:h-80">
-        <div className="bg-orange-200 w-1/2">
-          img
+      <div className="py-10 md:flex px-10">
+        <div className=" w-1/2">
+          <Image className="c" src={img2} height={260} width={500}></Image>
         </div>
-        <div className="bg-gray-200 w-1/2 content-center px-5" >
+        <div className=" w-1/2 content-center" >
           <h1 className=" text-4xl font-serif font-semibold "> Ready to make a <span className="text-purple-500">  change ?</span></h1>
           <p className="py-6"> something is writting hererj jfkj fsdio something is writting hererj jfkj fsdio sjf oasjifsa ijf ojfso jsojf soj f ssomething is writting hererj jfkj fsdio sjf oasjifsa ijf ojfso jsojf soj f s sjf oasjifsa ijf ojfso jsojf soj f s </p>
           <Button></Button>
