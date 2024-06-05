@@ -35,6 +35,7 @@ const page = async () => {
 
     return (
         <div className='py-12'>
+
             {/*  course headline  */}
             <h1 className="text-center text-4xl font-serif font-semibold">
                 All <span className="text-purple-500">Courses</span> Here
@@ -53,11 +54,11 @@ const page = async () => {
                         key={index}
                         title={data.name}
                         description={data.email}
+                        id={data.id}
                         // image={course.image}
                     />
                 ))}
             </div>
-
         </div>
     );
 };
