@@ -12,7 +12,7 @@ const CourseCard = ({ title, description, image , id}) => {
             <div className="p-5">
                 <h2 className="text-2xl font-bold text-gray-800">{title}</h2>
                 <p className="text-gray-600 mt-2">{description}</p>
-                <Link href={`/course-details/${id}`}>
+                <Link href={`/course/${id}`}>
                     <button className='bg-purple-500 p-3'> Join Now</button>
                 </Link>
             </div>
