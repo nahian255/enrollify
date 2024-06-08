@@ -1,21 +1,24 @@
 import React from 'react';
 
-
-const courseDetails = async ({params}) => {
-    const {id}= params
-    // console.log(courses.id) 
-
-    const res = await fetch(`https://jsonplaceholder.typicode.com/users/${id}`);
+const CourseDetails = async ({ params }) => {
+    const { id } = params;
+    const res = await fetch(`http://localhost:3000/api/courses/${id}`);
     const data = await res.json();
-    // console.log(data) 
 
     return (
-        <div>
-            <h1> course Details page </h1>
-            <p> showing the course id number- {id}</p>
-            <p> name : {data.name}</p>
+        <div style={{ textAlign: 'center' }}>
+            <h1>Course Details</h1>
+            <h2>{data.title}</h2>
+            <img src={data.image} alt={data.title} style={{ maxWidth: '100%', maxHeight: '300px', marginBottom: '20px' }} />
+            <p><strong>Description:</strong> {data.description}</p>
+            <p><strong>Instructor:</strong> {data.instructor}</p>
+            <p><strong>Duration:</strong> {data.duration}</p>
+            <p><strong>Difficulty:</strong> {data.difficulty}</p>
+            <p><strong>Price:</strong> ${data.price}</p>
         </div>
     );
 };
 
-export default courseDetails;
+export default CourseDetails;
+
+

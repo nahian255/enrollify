@@ -6,7 +6,7 @@ import image from "@/public/fitness.jpg"
 
 const page = async () => {
 
-    const res = await fetch('http://localhost:3000/api');
+    const res = await fetch('http://localhost:3000/api/courses');
     const datas = await res.json();
     // console.log(datas)
 
