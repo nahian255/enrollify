@@ -20,9 +20,9 @@ const courseDetails = async ({params}) => {
     const {id}= params
     // console.log(courses.id) 
 
-    const res = await fetch(`https://jsonplaceholder.typicode.com/users/${params.id}`);
+    const res = await fetch(`https://jsonplaceholder.typicode.com/users/${id}`);
     const data = await res.json();
-    console.log(data) 
+    // console.log(data) 
 
 
     // const singleData = data.find( ({ id }) => id === id )
