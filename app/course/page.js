@@ -2,34 +2,11 @@ import CourseCard from '@/components/courses/CourseCard';
 import React from 'react';
 import image from "@/public/fitness.jpg"
 
-// const courses = [
-//     {
-//         title: 'Yoga',
-//         description: 'Improve your flexibility and reduce stress through our yoga classes.',
-//         image: {image}, // Replace with actual image path
-//     },
-//     {
-//         title: 'Fat Loss',
-//         description: 'Join our fat loss program to achieve your weight loss goals effectively.',
-//         image: {image},    },
-//     {
-//         title: 'Strength Training',
-//         description: 'Build muscle and strength with our specialized training programs.',
-//         image: {image},    },
-//     {
-//         title: 'Strength Training',
-//         description: 'Build muscle and strength with our specialized training programs.',
-//         image: {image},    },
-//     {
-//         title: 'Strength Training',
-//         description: 'Build muscle and strength with our specialized training programs.',
-//         image: {image},    },
-//         // Add more courses as needed
-// ];
+
 
 const page = async () => {
 
-    const res = await fetch('https://jsonplaceholder.typicode.com/users');
+    const res = await fetch('http://localhost:3000/api');
     const datas = await res.json();
     // console.log(datas)
 
@@ -47,13 +24,14 @@ const page = async () => {
             </div>
 
             {/*  All Courses  */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-5 md:px-10">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 px-5 md:px-10">
                 {datas.map((data, index) => (
                     // console.log(data.name)
                     <CourseCard
                         key={index}
-                        title={data.name}
-                        description={data.email}
+                        title={data.title}
+                        description={data.description}
+                        image={data.image}
                         id={data.id}
                         // image={course.image}
                     />
