@@ -11,6 +11,7 @@
   "dependencies": {
     "@ant-design/nextjs-registry": "^1.0.0",
     "clsx": "^2.1.1",
+    "dotenv": "^14.0.0",
     "env": "^0.0.2",
     "express": "^4.19.2",
     "framer-motion": "^11.2.10",
