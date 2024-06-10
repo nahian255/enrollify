@@ -1,4 +1,4 @@
-'use server'
+// 'use server'
 
 import CourseModel from "@/models/courseModel"
 import connectDB from "@/lib/bdconnect" 

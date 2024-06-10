@@ -2,7 +2,7 @@ import { Schema, model, models } from 'mongoose'
 
 
 const courseSchema = new Schema ({
-    msg:{
+    msg:{ 
         type : String,
         required : true
     }
