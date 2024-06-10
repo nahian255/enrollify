@@ -1,11 +1,16 @@
 
 // Assuming courses is an array of course objects
 
-import courses from '@/data/course.json';
+// import courses from '@/data/course.json';
 
 export async function GET(request, { params }) {
     const id = params?.id;
     
+    // const fata = await getCourse();
+    // console.log(fata)
+    
+    // const  arr = fata.data
+
     if (id) {
         const course = courses.find(course => course.id === parseInt(id));
         if (course) {
