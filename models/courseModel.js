@@ -8,7 +8,6 @@ const courseSchema = new Schema ({
     }
 }, {timestamps:true})
 
-const CourseModel = models.user 
-// || model('course',courseSchema)
+const CourseModel = models.courses || model('courses',courseSchema)
 
 export default CourseModel;

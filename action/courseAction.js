@@ -6,7 +6,9 @@ import connectDB from "@/lib/bdconnect"
 export async function getCourse(){
     try{
         await connectDB();
-        return {msg : 'GET'}
+        const data = await CourseModel.find();
+
+        return {data}
     } catch(error){
         return{errMsg : error.message}
     }
