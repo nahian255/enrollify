@@ -10,4 +10,4 @@ export async function getCourse(){
     } catch(error){
         return{errMsg : error.message}
     }
-}
+};

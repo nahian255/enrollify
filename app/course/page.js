@@ -1,6 +1,7 @@
 import CourseCard from '@/components/courses/CourseCard';
 import React from 'react';
 import image from "@/public/fitness.jpg"
+import { getCourse } from '@/action/courseAction';
 
 
 
@@ -9,6 +10,9 @@ const page = async () => {
     const res = await fetch('http://localhost:3000/api/courses');
     const datas = await res.json();
     // console.log(datas)
+
+    const fata = await getCourse();
+    console.log(fata)
 
     return (
         <div className='py-12'>
