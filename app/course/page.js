@@ -7,7 +7,9 @@ import { getCourse } from '@/action/courseAction';
 
 const page = async () => {
 
-    const res = await fetch('http://localhost:3000/api/exparement');
+    const res = await fetch('http://localhost:3000/api/courses',{
+        cache: 'no-store'
+    });
     const datas = await res.json();
     console.log(datas)
 

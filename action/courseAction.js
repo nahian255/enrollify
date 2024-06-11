@@ -1,4 +1,4 @@
-// 'use server'
+'use server'
 
 import CourseModel from "@/models/courseModel"
 import connectDB from "@/lib/bdconnect" 
@@ -13,3 +13,4 @@ export async function getCourse(){
         return{errMsg : error.message}
     }
 };
+
