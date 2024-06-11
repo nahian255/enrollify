@@ -11,7 +11,7 @@ const page = async () => {
         cache: 'no-store'
     });
     const datas = await res.json();
-    console.log(datas)
+    // console.log(datas)
 
     // const fata = await getCourse();
     // console.log(fata.data[0].name)

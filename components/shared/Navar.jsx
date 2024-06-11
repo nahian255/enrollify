@@ -10,8 +10,9 @@ const Navbar = () => {
                 <div>
                     <Link className="p-4" href={'/'}>Home</Link>
                     <Link className="p-4" href={'course'}>course</Link>
-                    <Link href={'about'}>About</Link>
+                    <Link href={'add-class'}>Add Class</Link>
                     <Link className="p-4" href={'blog'}>Blog</Link>
+                    <Link href={'about'}>About</Link>
                     <Link className="p-4" href={'extra'}>Extra</Link>
                 </div>
             </nav>
