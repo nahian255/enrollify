@@ -41,7 +41,7 @@ const page = async () => {
                         title={data.title}
                         description={data.description}
                         image={data.image}
-                        id={data.id}
+                        id={data._id}
                         // image={course.image}
                     />
                 ))}
