@@ -5,6 +5,8 @@ import connectDB from '@/lib/bdconnect'
 import CourseModel from '@/models/courseModel';
 // import courses from '@/data/course.json'
 
+
+//  make all courses api
 export async function GET(req) {
     await connectDB();
     const data = await CourseModel.find().lean();
@@ -17,6 +19,7 @@ export async function GET(req) {
     });
 }
 
+// save a courses in database 
 export async function POST(req) {
     await connectDB();
 
