@@ -3,11 +3,11 @@
 import { Schema, model, models } from 'mongoose';
 
 const courseSchema = new Schema({
-    id: {
-        type: Number,
-        required: true,
-        unique: true
-    },
+    // id: {
+    //     type: Number,
+    //     required: true,
+    //     unique: true
+    // },
     title: {
         type: String,
         required: true
