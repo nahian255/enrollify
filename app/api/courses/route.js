@@ -26,10 +26,9 @@ export async function POST(req) {
     try {
         const body = await req.json(); // Parse the JSON body
         console.log(body, 'body');
-
+        
         const course = new CourseModel(body);
         await course.save();
-
         return new Response(JSON.stringify(course), {
             status: 201,
             headers: {

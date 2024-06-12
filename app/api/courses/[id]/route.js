@@ -1,28 +1,3 @@
-
-// import { getCourse } from "@/action/courseAction";
-
-// export async function GET(request, { params }) {
-//     const id = params?.id;
-//     console.log(id)
-
-//     const res = await fetch('http://localhost:3000/api/courses',{
-//         cache: 'no-store'
-//     });
-//     const datas = await res.json();
-//     // console.log(datas)
-
-//     if (id) {
-//         const course = datas.find(course => course._id === parseInt(id));
-//         console.log(course)
-
-//         if (course) {
-//             return new Response(JSON.stringify(course), { headers: { 'Content-Type': 'application/json' } });
-//         }
-//         return new Response(JSON.stringify({ error: 'Course not found' }), { status: 404, headers: { 'Content-Type': 'application/json' } });
-//     }
-//     return new Response(JSON.stringify(courses), { headers: { 'Content-Type': 'application/json' } });
-// }
-
 // -----------------------
 
 import connectDB from '@/lib/bdconnect';
@@ -64,3 +39,37 @@ export async function GET(request, { params }) {
     }
 }
 
+
+
+
+
+
+
+
+
+
+
+
+// import { getCourse } from "@/action/courseAction";
+
+// export async function GET(request, { params }) {
+//     const id = params?.id;
+//     console.log(id)
+
+//     const res = await fetch('http://localhost:3000/api/courses',{
+//         cache: 'no-store'
+//     });
+//     const datas = await res.json();
+//     // console.log(datas)
+
+//     if (id) {
+//         const course = datas.find(course => course._id === parseInt(id));
+//         console.log(course)
+
+//         if (course) {
+//             return new Response(JSON.stringify(course), { headers: { 'Content-Type': 'application/json' } });
+//         }
+//         return new Response(JSON.stringify({ error: 'Course not found' }), { status: 404, headers: { 'Content-Type': 'application/json' } });
+//     }
+//     return new Response(JSON.stringify(courses), { headers: { 'Content-Type': 'application/json' } });
+// }
