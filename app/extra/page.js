@@ -7,7 +7,7 @@ const extraPage = async () => {
         cache: 'no-store' // Disable caching
     });
     const datas = await res.json()
-    console.log(datas)
+    // console.log(datas)
     return (
         <div>
             <h1> this is extra page</h1>
@@ -23,6 +23,12 @@ const extraPage = async () => {
             </div>
 
 
+            <div className="flex items-center justify-center min-h-screen bg-green-400">
+                <div className="flex flex-col bg-purple-500 items-center">
+                    <div className="bg-red-300 w-16 h-16 border-t-2 border-blue-500 border-solid rounded-full animate-spin mb-4"></div>
+                    <h1 className="text-xl font-semibold text-gray-700">Loading, please wait...</h1>
+                </div>
+            </div>
         </div>
     );
 };

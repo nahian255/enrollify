@@ -25,10 +25,9 @@ const CourseDetails = async ({ params }) => {
                 </div>
 
                 <div className="p-6">
-                    <h1 className="text-center text-4xl font-serif font-semibold">
+                    <h1 className="text-center text-4xl font-serif font-semibold pb-4">
                         Course <span className="text-purple-500">Overview</span>
                     </h1>
-                    <h2 className="text-2xl font-semibold text-gray-800 mb-4">Course Overview</h2>
                     <p className="text-gray-700 mb-4">{data.description}</p>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <div>
