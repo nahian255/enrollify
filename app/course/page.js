@@ -1,9 +1,7 @@
 import CourseCard from '@/components/courses/CourseCard';
 import React from 'react';
-import image from "@/public/fitness.jpg"
+// import image from "@/public/fitness.jpg"
 import { getCourse } from '@/action/courseAction';
-
-
 
 const page = async () => {
 
@@ -13,19 +11,12 @@ const page = async () => {
     const datas = await res.json();
     // console.log(datas)
 
-    // const fata = await getCourse();
-    // console.log(fata.data[0].name)
-
     return (
         <div className='py-12'>
-
             {/*  course headline  */}
             <h1 className="text-center text-4xl font-serif font-semibold">
                 All <span className="text-purple-500">Courses</span> Here
             </h1>
-            {/* <h1 className="text-center text-4xl font-serif font-semibold">
-                All <span className="text-purple-500">23{fata.data[0].name}</span> Here
-            </h1> */}
             <div className="flex justify-center">
                 <p className="text-center text-sm py-5 w-1/2">
                     Choose the membership plan that fits your needs. Whether you're looking for basic access or comprehensive training and support, we have a plan for you.

@@ -1,4 +1,4 @@
-'use client';
+
 import React from 'react';
 
 const CourseDetails = async ({ params }) => {
@@ -7,27 +7,46 @@ const CourseDetails = async ({ params }) => {
     const data = await res.json();
 
     return (
-        <div className="flex flex-col items-center bg-gray-50 py-10">
-            <div className="bg-white shadow-lg rounded-lg p-6 max-w-3xl w-full">
-                <h1 className="text-4xl font-bold mb-4 text-center text-gray-800">Course Details</h1>
-                <div className="flex flex-col md:flex-row items-center md:items-start md:space-x-6">
+        <div className="flex flex-col items-center bg-gray-100 ">
+            <div className="bg-white shadow-2xl rounded-lg overflow-hidden max-w-full w-full">
+                {/* <h1>new </h1> */}
+                <div className="relative">
                     <img
                         src={data.image}
                         alt={data.title}
-                        className="w-full md:w-1/2 h-auto rounded-lg shadow-md mb-6 md:mb-0"
+                        className="w-full h-80 object-cover"
                     />
-                    <div className="w-full md:w-1/2">
-                        <h2 className="text-2xl font-semibold text-purple-600 mb-4">{data.title}</h2>
-                        <p className="text-gray-700 mb-4"><strong>Description:</strong> {data.description}</p>
-                        <p className="text-gray-700 mb-2"><strong>Instructor:</strong> {data.instructor}</p>
-                        <p className="text-gray-700 mb-2"><strong>Duration:</strong> {data.duration}</p>
-                        <p className="text-gray-700 mb-2"><strong>Difficulty:</strong> {data.difficulty}</p>
-                        <p className="text-gray-700 mb-4"><strong>Price:</strong> ${data.price}</p>
+                    <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70"></div>
+                    <div className="absolute bottom-0 left-4 p-4 text-white">
+                        <h1 className="text-5xl font-bold py-4">{data.title}</h1>
+                        <p className="text-lg">{data.duration}</p>
                     </div>
+                    
                 </div>
+
+                <div className="p-6">
+                    <h1 className="text-center text-4xl font-serif font-semibold">
+                        Course <span className="text-purple-500">Overview</span>
+                    </h1>
+                    <h2 className="text-2xl font-semibold text-gray-800 mb-4">Course Overview</h2>
+                    <p className="text-gray-700 mb-4">{data.description}</p>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                            <p className="text-gray-600"><strong>Instructor:</strong> {data.instructor}</p>
+                            <p className="text-gray-600"><strong>Difficulty:</strong> {data.difficulty}</p>
+                        </div>
+                        <div>
+                            <p className="text-gray-600"><strong>Price:</strong> ${data.price}</p>
+                        </div>
+                    </div>
+                    <button className="bg-purple-500 text-white py-2 px-4 rounded mt-4 hover:bg-purple-600">
+                        Join Now
+                    </button>
+                </div>
+              
             </div>
         </div>
-    ); 
+    );
 };
 
 export default CourseDetails;
