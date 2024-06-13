@@ -1,4 +1,5 @@
 
+import Link from 'next/link';
 import React from 'react';
 
 const CourseDetails = async ({ params }) => {
@@ -14,14 +15,14 @@ const CourseDetails = async ({ params }) => {
                     <img
                         src={data.image}
                         alt={data.title}
-                        className="w-full h-80 object-cover"
+                        className="w-full h-96 object-cover"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70"></div>
                     <div className="absolute bottom-0 left-4 p-4 text-white">
                         <h1 className="text-5xl font-bold py-4">{data.title}</h1>
                         <p className="text-lg">{data.duration}</p>
                     </div>
-                    
+
                 </div>
 
                 <div className="p-6">
@@ -38,11 +39,13 @@ const CourseDetails = async ({ params }) => {
                             <p className="text-gray-600"><strong>Price:</strong> ${data.price}</p>
                         </div>
                     </div>
-                    <button className="bg-purple-500 text-white py-2 px-4 rounded mt-4 hover:bg-purple-600">
-                        Join Now
-                    </button>
+                    <Link href={'/pricing'}>
+                        <button className="bg-purple-500 text-white py-2 px-4 rounded mt-4 hover:bg-purple-600">
+                            Join Now
+                        </button>
+                    </Link>
                 </div>
-              
+
             </div>
         </div>
     );
