@@ -15,6 +15,7 @@ const Navbar = () => {
                     {/* <Link href={'/about'}>About</Link> */}
                     <Link href={'/pricing'}>Pricing</Link>
                     {/* <Link className="p-4" href={'/extra'}>Extra</Link> */}
+                    <Link className="p-4" href={'/register'}> Sing Up</Link>
                 </div>
             </nav>
         </div>
