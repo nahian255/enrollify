@@ -225,7 +225,7 @@ export default function Home() {
             <div className="md:w-1/3">
               <h3 className="text-xl font-semibold">Enrolify</h3>
               <p className="mt-4">
-                Your ultimate destination for achieving fitness goals. Join us and become a part of our fitness community.
+                Your ultimate destination for achieving fitness goals. Join us and become a part of our fitness community. That is ultimate solution that we use. 
               </p>
             </div>
             <div className="md:w-1/3 mt-8 md:mt-0">
