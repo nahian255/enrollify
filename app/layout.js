@@ -2,7 +2,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { AntdRegistry } from '@ant-design/nextjs-registry';
 import Navbar from "@/components/shared/Navar";
-
+import ClientSessionProvider from "@/components/sessionProvider/sessionP"
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
@@ -13,12 +13,14 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <Navbar></Navbar>
-        <AntdRegistry>
-          {children}
+      <ClientSessionProvider>
+        <body className={inter.className}>
+          <Navbar></Navbar>
+          <AntdRegistry>
+            {children}
           </AntdRegistry>
-    </body>
+        </body>
+        </ClientSessionProvider>
     </html>
   );
 }
