@@ -1,25 +1,33 @@
+"use client"
 import Link from 'next/link';
 import React from 'react';
+import { useSession, signIn, signOut } from 'next-auth/react';
 
 const Navbar = () => {
+    const { data: session } = useSession();
+    // console.log(session.user.name)
+
     return (
-        <div>
-              <div>
-            <nav className="flex justify-between bg-slate-400 p-6">
-                <h1>logo</h1>
-                <div>
-                    <Link className="p-4" href={'/'}>Home</Link>
-                    <Link className="p-4" href={'/course'}>course</Link>
-                    <Link href={'/add-class'}>Add Class</Link>
-                    <Link className="p-4" href={'/blog'}>Blog</Link>
-                    {/* <Link href={'/about'}>About</Link> */}
-                    <Link href={'/pricing'}>Pricing</Link>
-                    {/* <Link className="p-4" href={'/extra'}>Extra</Link> */}
-                    <Link className="p-4" href={'/register'}> Sing Up</Link>
+        <nav className="bg-gray-800 text-white py-4 px-6">
+            <div className="container mx-auto flex justify-between items-center">
+                <div className="text-2xl font-bold">
+                    <Link href="/">Enrolify</Link>
                 </div>
-            </nav>
-        </div>
-        </div>
+                <div className="space-x-4">
+                    
+                    <Link className="hover:text-purple-400" href="/">Home</Link>
+                    <Link className="hover:text-purple-400" href="/course">Course</Link>
+                    <Link className="hover:text-purple-400" href="/add-class">Add Class</Link>
+                    <Link className="hover:text-purple-400" href="/blog">Blog</Link>
+                    <Link className="hover:text-purple-400" href="/pricing">Pricing</Link>
+                    {session ? (
+                        <button onClick={() => signOut()} className="hover:text-purple-400">{session?.user?.name}</button>
+                    ) : (
+                        <Link className="hover:text-purple-400" href="/register">Sign Up</Link>
+                    )}
+                </div>
+            </div>
+        </nav>
     );
 };
 
