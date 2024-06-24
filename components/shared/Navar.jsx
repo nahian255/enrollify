@@ -21,7 +21,7 @@ const Navbar = () => {
                     <Link className="hover:text-purple-400" href="/blog">Blog</Link>
                     <Link className="hover:text-purple-400" href="/pricing">Pricing</Link>
                     {session ? (
-                        <button onClick={() => signOut()} className="hover:text-purple-400">{session?.user?.name}</button>
+                        <button onClick={() => signOut()} className="hover:text-purple-400">{session?.user?.name} / LogOut</button>
                     ) : (
                         <Link className="hover:text-purple-400" href="/register">Sign Up</Link>
                     )}
