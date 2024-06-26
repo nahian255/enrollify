@@ -11,7 +11,14 @@ const handler = NextAuth({
     // github authentication providers...
     GitHubProvider({
       clientId: process.env.GITHUB_ID,
-      clientSecret: process.env.GITHUB_SECRET
+      clientSecret: process.env.GITHUB_SECRET,
+      authorization: {
+        params: {
+          prompt: "consent",
+          access_type: "offline",
+          response_type: "code"
+        }
+      }
     }),
     
     // google authentication providers....
