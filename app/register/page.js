@@ -13,7 +13,7 @@ const RegisterPage = () => {
                 {/*  form input */}
                 <SingUpForm></SingUpForm>
                 <p className="text-center text-gray-600 mt-4">
-                    Already have an account? <a href="/login" className="text-blue-500">Sign in</a>
+                    Already have an account? <a href="/login" className="text-blue-500">Log in</a>
                 </p>
                 <div className="flex justify-center space-x-4 mt-6">
                     {/* <GoogleSingInBtn></GoogleSingInBtn> */}
