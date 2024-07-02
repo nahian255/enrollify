@@ -1,4 +1,5 @@
 "use client"
+// import { response } from 'express';
 import React, { useState } from 'react';
 
 const SingUpForm = () => {
@@ -17,10 +18,29 @@ const SingUpForm = () => {
         });
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
         // Handle form submission logic
         console.log('Form Data:', formData);
+
+        try {
+            const res = await fetch('/api/users', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(formData)
+            });
+            if (res.ok) {
+                console.log('User created successfully');
+            } else {
+                console.error('Failed to create user');
+            }
+        } catch (error) {
+            console.error('Error:', error);
+        }
+
+
     };
 
     return (
