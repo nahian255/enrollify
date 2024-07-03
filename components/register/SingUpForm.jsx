@@ -1,6 +1,8 @@
 "use client"
 // import { response } from 'express';
 import React, { useState } from 'react';
+import Modal from '@/components/modal/Modal'; // Import the Modal component
+
 
 const SingUpForm = () => {
 
@@ -32,6 +34,8 @@ const SingUpForm = () => {
                 body: JSON.stringify(formData)
             });
             if (res.ok) {
+                setModalMessage('Course added successfully!');
+                setShowModal(true);
                 console.log('User created successfully');
             } else {
                 console.error('Failed to create user');
