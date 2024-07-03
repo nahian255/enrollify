@@ -1,7 +1,6 @@
-import connectDB from '@/lib/bdconnect'
+import connectDB from '@/lib/bdconnect';
 import User from '@/models/userModel';
 
-// make all user api 
 export async function GET(req) {
     await connectDB();
     const data = await User.find().lean();
@@ -14,14 +13,23 @@ export async function GET(req) {
     });
 }
 
-
-// save a user in db ....
 export async function POST(req) {
     await connectDB();
 
     try {
         const body = await req.json();
-        // console.log(body, 'body');
+
+        // Check if email already exists
+        const existingUser = await User.findOne({ email: body.email });
+        if (existingUser) {
+            return new Response(JSON.stringify({ error: 'Email already in use' }), {
+                status: 400,
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Cache-Control': 'no-store' // Disable caching
+                }
+            });
+        }
 
         const user = new User(body);
         await user.save();

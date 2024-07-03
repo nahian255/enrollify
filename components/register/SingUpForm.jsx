@@ -1,16 +1,15 @@
-"use client"
-// import { response } from 'express';
+"use client";
 import React, { useState } from 'react';
-import Modal from '@/components/modal/Modal'; // Import the Modal component
+// import { useRouter } from 'next/router';
 
 
 const SingUpForm = () => {
-
     const [formData, setFormData] = useState({
         username: '',
         email: '',
         password: ''
     });
+    const [errorMessage, setErrorMessage] = useState('');
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -22,8 +21,7 @@ const SingUpForm = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        // Handle form submission logic
-        console.log('Form Data:', formData);
+        setErrorMessage(''); // Clear any previous error messages
 
         try {
             const res = await fetch('/api/users', {
@@ -33,22 +31,34 @@ const SingUpForm = () => {
                 },
                 body: JSON.stringify(formData)
             });
+
             if (res.ok) {
-                setModalMessage('Course added successfully!');
-                setShowModal(true);
+                alert('user created successfully')
                 console.log('User created successfully');
+                setFormData({
+                    username: '',
+                    email: '',
+                    password: ''
+                });
+
+                // Handle successful user creation (e.g., redirect to a login page)
             } else {
-                console.error('Failed to create user');
+                const errorData = await res.json();
+                setErrorMessage(errorData.error || 'Failed to create user');
             }
         } catch (error) {
             console.error('Error:', error);
+            setErrorMessage('An error occurred while creating the user');
         }
-
-
     };
 
     return (
         <div>
+            {errorMessage && (
+                <div className="mb-4 text-red-600">
+                    {errorMessage}
+                </div>
+            )}
             <form onSubmit={handleSubmit} className="space-y-4">
                 <div>
                     <label className="block text-gray-700 font-bold mb-2">Username:</label>
