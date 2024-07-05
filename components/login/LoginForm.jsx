@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 
 const LoginForm = () => {
+
     const [formData, setFormData] = useState({
         email: '',
         password: ''
@@ -21,7 +22,7 @@ const LoginForm = () => {
         setErrorMessage(''); // Clear any previous error messages
 
         try {
-            const res = await fetch('/api/users/login', {
+            const response = await fetch('/api/login', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -29,25 +30,18 @@ const LoginForm = () => {
                 body: JSON.stringify(formData)
             });
 
-            if (res.ok) {
-                const data = await res.json();
-                alert('Login successful');
-                console.log('Login successful', data);
-                // Clear form fields
-                setFormData({
-                    email: '',
-                    password: ''
-                });
-                // Redirect to home page or any other page
-                window.location.href = '/';
+            const result = await response.json();
+
+            if (response.ok) {
+                // Handle successful login, e.g., redirect to protected page
+                window.location.href = '/protected';
             } else {
-                const errorData = await res.json();
-                setErrorMessage(errorData.error || 'Failed to login');
+                setErrorMessage(result.message);
             }
         } catch (error) {
-            console.error('Error:', error);
-            setErrorMessage('An error occurred while logging in');
+            setErrorMessage('An error occurred. Please try again.');
         }
+
     };
 
     return (
