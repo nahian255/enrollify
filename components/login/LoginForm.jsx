@@ -34,7 +34,8 @@ const LoginForm = () => {
 
             if (response.ok) {
                 // Handle successful login, e.g., redirect to protected page
-                window.location.href = '/protected';
+                alert('user Login successfully')
+                window.location.href = '/';
             } else {
                 setErrorMessage(result.message);
             }
