@@ -30,15 +30,10 @@ const LoginForm = () => {
                 body: JSON.stringify(formData)
             });
 
-            const result = await response.json();
-            console.log('frontend coming ',result)
-            // if (response.ok) {
-            //     // Handle successful login, e.g., redirect to protected page
-            //     alert('user Login successfully')
-            //     window.location.href = '/';
-            // } else {
-            //     setErrorMessage(result.message);
-            // }
+            const currentUser = await response.json();
+            console.log('frontend coming ', currentUser)
+
+
         } catch (error) {
             setErrorMessage('An error occurred. Please try again.');
         }
