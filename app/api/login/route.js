@@ -21,8 +21,18 @@ export async function POST(req) {
             return NextResponse.json({ message: 'Invalid password' }, { status: 401 });
         }
 
-        // If authentication is successful, return a success message
-        return NextResponse.json({ message: 'Login successful' }, { status: 200 });
+        // If authentication is successful, return user information
+        const { _id, name, email: userEmail } = user; // Destructure the required user fields
+
+        return NextResponse.json({
+            message: 'Login successful',
+            user: {
+                id: _id,
+                name,
+                email: userEmail
+            }
+        }, { status: 200 });
+
     } catch (error) {
         console.error('Server error:', error);
         return NextResponse.json({ message: 'Internal server error' }, { status: 500 });

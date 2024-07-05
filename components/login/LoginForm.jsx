@@ -31,14 +31,14 @@ const LoginForm = () => {
             });
 
             const result = await response.json();
-
-            if (response.ok) {
-                // Handle successful login, e.g., redirect to protected page
-                alert('user Login successfully')
-                window.location.href = '/';
-            } else {
-                setErrorMessage(result.message);
-            }
+            console.log('frontend coming ',result)
+            // if (response.ok) {
+            //     // Handle successful login, e.g., redirect to protected page
+            //     alert('user Login successfully')
+            //     window.location.href = '/';
+            // } else {
+            //     setErrorMessage(result.message);
+            // }
         } catch (error) {
             setErrorMessage('An error occurred. Please try again.');
         }
