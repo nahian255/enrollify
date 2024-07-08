@@ -4,12 +4,30 @@ import React, { useEffect, useState } from 'react';
 
 const Navbar = () => {
     const [currentUser, setCurrentUser] = useState(null);
-    console.log(currentUser)
+    // const userName = currentUser?.user?.username;
+    console.log(currentUser, currentUser?.user?.username)
+
+    // useEffect(() => {
+    //     const user = localStorage.getItem('currentUser');
+    //     if (user) {
+    //         setCurrentUser(JSON.parse(user));
+    //     }
+    // }, [currentUser]);
+
     useEffect(() => {
         const user = localStorage.getItem('currentUser');
         if (user) {
             setCurrentUser(JSON.parse(user));
         }
+
+        const handleUserLoggedIn = (event) => {
+            setCurrentUser(event.detail);
+        };
+
+        window.addEventListener('userLoggedIn', handleUserLoggedIn);
+        return () => {
+            window.removeEventListener('userLoggedIn', handleUserLoggedIn);
+        };
     }, []);
 
     const handleLogout = () => {
@@ -30,7 +48,7 @@ const Navbar = () => {
                     <Link className="hover:text-purple-400" href="/blog">Blog</Link>
                     <Link className="hover:text-purple-400" href="/pricing">Pricing</Link>
                     {currentUser ? (
-                        <button onClick={handleLogout} className="hover:text-purple-400">{currentUser.name} / LogOut</button>
+                        <button onClick={handleLogout} className="hover:text-purple-400">{currentUser?.user?.username}</button>
                     ) : (
                         <Link className="hover:text-purple-400" href="/register">Sign Up</Link>
                     )}

@@ -37,6 +37,10 @@ const LoginForm = () => {
                 localStorage.setItem('currentUser', JSON.stringify(currentUser));
                 console.log('frontend coming ', currentUser);
                 alert('Login successfully');
+
+                  // Dispatch a custom event to notify other components
+                  window.dispatchEvent(new CustomEvent('userLoggedIn', { detail: currentUser }));
+
                 setFormData({
                     email: '',
                     password: ''
@@ -102,11 +106,11 @@ const LoginForm = () => {
                                     stroke="currentColor"
                                     strokeWidth="4"
                                 ></circle>
-                                <path
+                                {/* <path
                                     className="opacity-75"
                                     fill="currentColor"
                                     d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291l1.707-1.707C7.52 15.779 6.28 14.72 5.02 13.707L2.93 15.79c1.708 1.292 3.877 2.064 6.15 2.125V19a8 8 0 01-2-.292z"
-                                ></path>
+                                ></path> */}
                             </svg>
                             Logging in...
                         </div>

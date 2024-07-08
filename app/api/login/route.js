@@ -22,13 +22,13 @@ export async function POST(req) {
         }
 
         // If authentication is successful, return user information
-        const { _id, name, email: userEmail } = user; // Destructure the required user fields
+        const { _id, username, email: userEmail } = user; // Destructure the required user fields
 
         return NextResponse.json({
             message: 'Login successful',
             user: {
                 id: _id,
-                name,
+                username,
                 email: userEmail
             }
         }, { status: 200 });
