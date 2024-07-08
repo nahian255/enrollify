@@ -4,7 +4,7 @@ import React, { useEffect, useState } from 'react';
 
 const Navbar = () => {
     const [currentUser, setCurrentUser] = useState(null);
-
+    console.log(currentUser)
     useEffect(() => {
         const user = localStorage.getItem('currentUser');
         if (user) {
