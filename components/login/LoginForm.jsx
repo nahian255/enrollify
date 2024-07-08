@@ -2,12 +2,12 @@
 import React, { useState } from 'react';
 
 const LoginForm = () => {
-
     const [formData, setFormData] = useState({
         email: '',
         password: ''
     });
     const [errorMessage, setErrorMessage] = useState('');
+    const [isLoading, setIsLoading] = useState(false); // New state for loading
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -20,6 +20,7 @@ const LoginForm = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         setErrorMessage(''); // Clear any previous error messages
+        setIsLoading(true); // Start loading
 
         try {
             const response = await fetch('/api/login', {
@@ -35,22 +36,19 @@ const LoginForm = () => {
                 // Save user information in local storage
                 localStorage.setItem('currentUser', JSON.stringify(currentUser));
                 console.log('frontend coming ', currentUser);
-                alert('Login succesfully')
+                alert('Login successfully');
                 setFormData({
-                   
                     email: '',
                     password: ''
                 });
-
             } else {
                 setErrorMessage(currentUser.message || 'An error occurred. Please try again.');
             }
-
-
         } catch (error) {
             setErrorMessage('An error occurred. Please try again.');
+        } finally {
+            setIsLoading(false); // Stop loading
         }
-
     };
 
     return (
@@ -86,8 +84,35 @@ const LoginForm = () => {
                 <button
                     type="submit"
                     className="w-full py-3 bg-blue-500 text-white font-bold rounded-md hover:bg-blue-600 focus:outline-none focus:ring focus:ring-blue-200"
+                    disabled={isLoading}
                 >
-                    LogIn
+                    {isLoading ? (
+                        <div className="flex items-center justify-center">
+                            <svg
+                                className="w-5 h-5 mr-3 -ml-1 text-white animate-spin"
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                            >
+                                <circle
+                                    className="opacity-25"
+                                    cx="12"
+                                    cy="12"
+                                    r="10"
+                                    stroke="currentColor"
+                                    strokeWidth="4"
+                                ></circle>
+                                <path
+                                    className="opacity-75"
+                                    fill="currentColor"
+                                    d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291l1.707-1.707C7.52 15.779 6.28 14.72 5.02 13.707L2.93 15.79c1.708 1.292 3.877 2.064 6.15 2.125V19a8 8 0 01-2-.292z"
+                                ></path>
+                            </svg>
+                            Logging in...
+                        </div>
+                    ) : (
+                        'LogIn'
+                    )}
                 </button>
             </form>
         </div>
