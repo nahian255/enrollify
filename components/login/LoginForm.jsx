@@ -31,7 +31,20 @@ const LoginForm = () => {
             });
 
             const currentUser = await response.json();
-            console.log('frontend coming ', currentUser)
+            if (response.ok) {
+                // Save user information in local storage
+                localStorage.setItem('currentUser', JSON.stringify(currentUser));
+                console.log('frontend coming ', currentUser);
+                alert('Login succesfully')
+                setFormData({
+                   
+                    email: '',
+                    password: ''
+                });
+
+            } else {
+                setErrorMessage(currentUser.message || 'An error occurred. Please try again.');
+            }
 
 
         } catch (error) {
