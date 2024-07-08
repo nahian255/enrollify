@@ -4,22 +4,13 @@ import React, { useEffect, useState } from 'react';
 
 const Navbar = () => {
     const [currentUser, setCurrentUser] = useState(null);
-    // const userName = currentUser?.user?.username;
-    console.log(currentUser, currentUser?.user?.username)
-
-    // useEffect(() => {
-    //     const user = localStorage.getItem('currentUser');
-    //     if (user) {
-    //         setCurrentUser(JSON.parse(user));
-    //     }
-    // }, [currentUser]);
+    const [dropdownOpen, setDropdownOpen] = useState(false);
 
     useEffect(() => {
         const user = localStorage.getItem('currentUser');
         if (user) {
             setCurrentUser(JSON.parse(user));
         }
-
         const handleUserLoggedIn = (event) => {
             setCurrentUser(event.detail);
         };
@@ -35,6 +26,10 @@ const Navbar = () => {
         setCurrentUser(null);
     };
 
+    const toggleDropdown = () => {
+        setDropdownOpen(!dropdownOpen);
+    };
+
     return (
         <nav className="bg-gray-800 text-white py-4 px-6">
             <div className="container mx-auto flex justify-between items-center">
@@ -48,7 +43,24 @@ const Navbar = () => {
                     <Link className="hover:text-purple-400" href="/blog">Blog</Link>
                     <Link className="hover:text-purple-400" href="/pricing">Pricing</Link>
                     {currentUser ? (
-                        <button onClick={handleLogout} className="hover:text-purple-400">{currentUser?.user?.username}</button>
+                        <div className="relative inline-block">
+                            <button onClick={toggleDropdown} className="hover:text-purple-400">
+                                {currentUser?.user?.username}
+                            </button>
+                            {dropdownOpen && (
+                                <div className="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-2">
+                                    <Link href="/dashboard" className="block px-4 py-2 text-gray-800 hover:bg-gray-200">
+                                        Dashboard
+                                    </Link>
+                                    <button
+                                        onClick={handleLogout}
+                                        className="block w-full text-left px-4 py-2 text-gray-800 hover:bg-gray-200"
+                                    >
+                                        Logout
+                                    </button>
+                                </div>
+                            )}
+                        </div>
                     ) : (
                         <Link className="hover:text-purple-400" href="/register">Sign Up</Link>
                     )}
