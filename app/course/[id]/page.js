@@ -1,16 +1,29 @@
 
-import Link from 'next/link';
+// import { router } from '@/components/hookes/Navigation';
+import JoinButton from '@/components/courses/JoinBtn';
 import React from 'react';
+
 
 const CourseDetails = async ({ params }) => {
     const { id } = params;
     const res = await fetch(`http://localhost:3000/api/courses/${id}`);
     const data = await res.json();
 
+    
+
+
+    // const handleJoinNow = () => {
+    //     const user = localStorage.getItem('currentUser');
+    //     if (user) {
+    //         router.push('/pricing');
+    //     } else {
+    //         router.push('/login');
+    //     }
+    // };
+
     return (
         <div className="flex flex-col items-center bg-gray-100 ">
             <div className="bg-white shadow-2xl rounded-lg overflow-hidden max-w-full w-full">
-                {/* <h1>new </h1> */}
                 <div className="relative">
                     <img
                         src={data.image}
@@ -22,7 +35,6 @@ const CourseDetails = async ({ params }) => {
                         <h1 className="text-5xl font-bold py-4">{data.title}</h1>
                         <p className="text-lg">{data.duration}</p>
                     </div>
-
                 </div>
 
                 <div className="p-6">
@@ -39,13 +51,14 @@ const CourseDetails = async ({ params }) => {
                             <p className="text-gray-600"><strong>Price:</strong> ${data.price}</p>
                         </div>
                     </div>
-                    <Link href={'/pricing'}>
-                        <button className="bg-purple-500 text-white py-2 px-4 rounded mt-4 hover:bg-purple-600">
-                            Join Now
-                        </button>
-                    </Link>
+                    <JoinButton/>
+                    {/* <button
+                        onClick={navigateBasedOnAuth}
+                        className="bg-purple-500 text-white py-2 px-4 rounded mt-4 hover:bg-purple-600"
+                    >
+                        Join Now
+                    </button> */}
                 </div>
-
             </div>
         </div>
     );
