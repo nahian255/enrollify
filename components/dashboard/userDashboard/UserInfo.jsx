@@ -16,7 +16,7 @@ export const UserInfo = () => {
                         <hr className='my-4 border-2 border-green-500 urplerounded' />
 
                         <div className='flex flex-col gap-2'>
-                            <Link href="/">
+                            <Link href="/dashboard/profile">
                                 <button className='bg-purple-500 text-white py-4 w-full rounded hover:bg-purple-600 transition-colors'>
                                     My Profile
                                 </button>
