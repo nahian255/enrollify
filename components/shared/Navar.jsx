@@ -1,24 +1,18 @@
-"use client";
+'use client';
+
 import Link from 'next/link';
-import React, { useEffect, useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 const Navbar = () => {
     const [currentUser, setCurrentUser] = useState(null);
     const [dropdownOpen, setDropdownOpen] = useState(false);
 
+    // Load current user from localStorage
     useEffect(() => {
         const user = localStorage.getItem('currentUser');
         if (user) {
             setCurrentUser(JSON.parse(user));
         }
-        const handleUserLoggedIn = (event) => {
-            setCurrentUser(event.detail);
-        };
-
-        window.addEventListener('userLoggedIn', handleUserLoggedIn);
-        return () => {
-            window.removeEventListener('userLoggedIn', handleUserLoggedIn);
-        };
     }, []);
 
     const handleLogout = () => {
@@ -31,7 +25,7 @@ const Navbar = () => {
     };
 
     return (
-        <nav className="bg-gray-800 text-white py-4 px-6">
+        <nav className="bg-gray-400 text-white py-4 px-6 fixed top-0 w-full z-50">
             <div className="container mx-auto flex justify-between items-center">
                 <div className="text-2xl font-bold">
                     <Link href="/">Enrolify</Link>

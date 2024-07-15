@@ -15,12 +15,14 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <ClientSessionProvider>
         <body className={inter.className}>
-          <Navbar></Navbar>
-          <AntdRegistry>
-            {children}
-          </AntdRegistry>
+          <div className="mt-10">
+            <Navbar></Navbar>
+            <AntdRegistry>
+              {children}
+            </AntdRegistry>
+          </div>
         </body>
-        </ClientSessionProvider>
+      </ClientSessionProvider>
     </html>
   );
 }
