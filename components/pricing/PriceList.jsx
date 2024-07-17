@@ -39,7 +39,7 @@ export const PriceList = () => {
                 </ul>
               </div>
               <div className="text-center pb-5">
-                <Button>Sign Up</Button>
+                <Button></Button>
               </div>
             </div>
 
@@ -63,7 +63,7 @@ export const PriceList = () => {
                 </ul>
               </div>
               <div className="text-center pb-5">
-                <Button>Sign Up</Button>
+                <Button></Button>
               </div>
             </div>
 
@@ -90,7 +90,7 @@ export const PriceList = () => {
                 <Button>Sign Up</Button>
               </div>
             </div>
-            
+
           </div>
         </div>
         
