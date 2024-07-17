@@ -10,8 +10,10 @@ const JoinButton = () => {
     const [loading, setLoading] = useState(false);
 
     const handleJoinNow = async () => {
-        setLoading(true);
-        const response = await fetch('/api/payment', {
+        // setLoading(true);
+
+
+        const response = await fetch('/api/payment/', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -26,14 +28,27 @@ const JoinButton = () => {
             }),
         });
 
-        const result = await response.json();
-        setLoading(false);
+        // if (!response.ok) {
+        //     throw new Error('Network response was not ok');
+        // }
 
-        if (result.url) {
-            window.location.href = result.url;
-        } else {
-            alert('Failed to initiate payment');
-        }
+
+        // try {
+            
+
+        //     const result = await response.json();
+        //     setLoading(false);
+
+        //     if (result.url) {
+        //         window.location.href = result.url;
+        //     } else {
+        //         alert('Failed to initiate payment');
+        //     }
+        // } catch (error) {
+        //     console.error('Failed to initiate payment', error);
+        //     alert('Failed to initiate payment');
+        //     setLoading(false);
+        // }
     };
 
     return (
