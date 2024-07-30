@@ -3,6 +3,7 @@ import Image from "next/image";
 import img2 from "@/public/fitness.jpg";
 import img3 from "@/public/fit-Icon.jpg";
 import { PriceList } from "@/components/pricing/PriceList";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -17,7 +18,8 @@ export default function Home() {
             Embrace a healthier you with our comprehensive exercise plans tailored to meet your fitness goals.
             Embrace a healthier you with our comprehensive exercise plans tailored to meet your fitness goals.
           </p>
-          <Button>Get Started</Button>
+          <Link href={'/course'}> <Button>Get Started</Button>
+          </Link>
         </div>
         <div className="md:w-1/2 flex items-center justify-center">
           <Image src={img2} height={400} width={400} alt="Exercise" />
@@ -78,8 +80,8 @@ export default function Home() {
       </div>
 
       {/* Pricing Plan */}
-     
-     <PriceList></PriceList>
+
+      <PriceList></PriceList>
 
       {/* Success Stories */}
       <div className="py-10 px-16">
@@ -145,7 +147,7 @@ export default function Home() {
             <div className="md:w-1/3">
               <h3 className="text-xl font-semibold">Enrolify</h3>
               <p className="mt-4">
-                Your ultimate destination for achieving fitness goals. Join us and become a part of our fitness community. That is ultimate solution that we use. 
+                Your ultimate destination for achieving fitness goals. Join us and become a part of our fitness community. That is ultimate solution that we use.
               </p>
             </div>
             <div className="md:w-1/3 mt-8 md:mt-0">
