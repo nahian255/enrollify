@@ -5,11 +5,15 @@ import { getCourse } from '@/action/courseAction';
 
 const page = async () => {
 
-    const res = await fetch('http://localhost:3000/api/courses',{
+    const res = await fetch('http://localhost:3000/api/courses', {
         cache: 'no-store'
     });
     const datas = await res.json();
     // console.log(datas)
+
+    const sFields = datas.map(course => course.s);
+
+    console.log(sFields);
 
     return (
         <div className='py-12'>
@@ -33,7 +37,7 @@ const page = async () => {
                         description={data.description}
                         image={data.image}
                         id={data._id}
-                        // image={course.image}
+                    // image={course.image}
                     />
                 ))}
             </div>
