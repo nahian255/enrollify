@@ -7,7 +7,8 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="mt-">
+    <div>
+
       {/* Header part */}
       <header className="px-16 md:flex gap-10">
         <div className="md:w-1/2  flex flex-col justify-center">
@@ -80,8 +81,7 @@ export default function Home() {
       </div>
 
       {/* Pricing Plan */}
-
-      <PriceList></PriceList>
+      <PriceList />
 
       {/* Success Stories */}
       <div className="py-10 px-16">
@@ -140,51 +140,40 @@ export default function Home() {
         </div>
       </div>
 
+      {/* Scroll to Top Button */}
+      <div className="fixed bottom-4 right-4">
+        <a href="#" className="bg-red-200 p-2 rounded-full hover:underline">
+          get up
+        </a>
+      </div>
+
       {/* Footer */}
       <footer className="bg-gray-800 text-white py-10">
         <div className="container mx-auto px-6">
           <div className="md:flex md:justify-between">
             <div className="md:w-1/3">
-              <h3 className="text-xl font-semibold">Enrolify</h3>
-              <p className="mt-4">
-                Your ultimate destination for achieving fitness goals. Join us and become a part of our fitness community. That is ultimate solution that we use.
-              </p>
+              <h3 className="text-lg font-semibold mb-4">About Enrolify</h3>
+              <p className="text-gray-400">Enrolify is dedicated to helping you achieve your fitness goals through personalized plans, expert guidance, and a supportive community.</p>
             </div>
-            <div className="md:w-1/3 mt-8 md:mt-0">
-              <h3 className="text-xl font-semibold">Contact Us</h3>
-              <p className="mt-4">123 Fitness St, Muscle City, Fitland</p>
-              <p>Email: info@enrolify.com</p>
-              <p>Phone: (123) 456-7890</p>
-            </div>
-            <div className="md:w-1/3 mt-8 md:mt-0">
-              <h3 className="text-xl font-semibold">Quick Links</h3>
-              <ul className="mt-4">
-                <li className="mt-2"><a href="#" className="hover:underline">Home</a></li>
-                <li className="mt-2"><a href="#" className="hover:underline">About</a></li>
-                <li className="mt-2"><a href="#" className="hover:underline">Services</a></li>
-                <li className="mt-2"><a href="#" className="hover:underline">Contact</a></li>
+            <div className="md:w-1/3 mt-6 md:mt-0">
+              <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
+              <ul className="text-gray-400">
+                <li><a href="#" className="hover:underline">Home</a></li>
+                <li><a href="#" className="hover:underline">About</a></li>
+                <li><a href="#" className="hover:underline">Services</a></li>
+                <li><a href="#" className="hover:underline">Contact</a></li>
               </ul>
             </div>
-          </div>
-          <div className="mt-8 text-center">
-            <p>&copy; 2024 Enrolify. All rights reserved.</p>
-            <div className="flex justify-center mt-4">
-              <a href="#" className="mx-2 text-white hover:text-gray-400">
-                <i className="fab fa-facebook-f"></i>
-              </a>
-              <a href="#" className="mx-2 text-white hover:text-gray-400">
-                <i className="fab fa-twitter"></i>
-              </a>
-              <a href="#" className="mx-2 text-white hover:text-gray-400">
-                <i className="fab fa-instagram"></i>
-              </a>
-              <a href="#" className="mx-2 text-white hover:text-gray-400">
-                <i className="fab fa-linkedin-in"></i>
-              </a>
+            <div className="md:w-1/3 mt-6 md:mt-0">
+              <h3 className="text-lg font-semibold mb-4">Get In Touch</h3>
+              <p className="text-gray-400">123 Fitness Ave, Wellness City, Healthstate, 45678</p>
+              <p className="text-gray-400">Email: info@enrolify.com</p>
+              <p className="text-gray-400">Phone: +1 234 567 890</p>
             </div>
           </div>
         </div>
       </footer>
+
     </div>
   );
 }
