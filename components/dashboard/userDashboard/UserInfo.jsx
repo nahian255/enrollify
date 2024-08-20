@@ -31,9 +31,9 @@ export const UserInfo = () => {
                                     All Classes
                                 </button>
                             </Link>
-                            <Link href="/payment">
+                            <Link href="/dashboard/user-review">
                                 <button className='bg-green-500 text-white py-4 w-full rounded hover:bg-green-600 transition-colors'>
-                                  My Wishlist
+                                  Add Review
                                 </button>
                             </Link>
                         </div>

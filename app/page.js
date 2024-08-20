@@ -84,28 +84,43 @@ export default function Home() {
       <PriceList />
 
       {/* Success Stories */}
-      <div className="py-10 px-16">
-        <h1 className="text-center text-4xl font-serif font-semibold mb-10">
+      <div className="py-14 px-16 bg-gray-100">
+        <h1 className="text-center text-4xl font-serif font-semibold mb-12">
           Success <span className="text-purple-500">Stories</span>
         </h1>
-        <div className="md:flex justify-center gap-8">
-          <div className="md:w-1/3 p-6 shadow-2xl bg-white rounded-lg">
+        <div className="md:flex justify-center gap-10">
+          {/* Story 1 */}
+          <div className="md:w-1/3 p-8 shadow-lg bg-white rounded-xl hover:shadow-xl transition-shadow duration-300">
             <h2 className="text-2xl font-semibold mb-4">John Doe</h2>
-            <p className="text-sm text-gray-700 mb-4">"Joining Enrolify has transformed my life. The personalized training plans and supportive community have helped me achieve my fitness goals beyond my expectations."</p>
+            <p className="text-sm text-gray-700 mb-4">
+              <i className="fas fa-quote-left mr-2 text-purple-500"></i>
+              "Joining Enrolify has transformed my life. The personalized training plans and supportive community have helped me achieve my fitness goals beyond my expectations."
+            </p>
             <p className="text-sm text-purple-500">- Lost 20 lbs in 3 months</p>
           </div>
-          <div className="md:w-1/3 p-6 shadow-lg bg-white rounded-lg mt-6 md:mt-0">
+
+          {/* Story 2 */}
+          <div className="md:w-1/3 p-8 shadow-lg bg-white rounded-xl mt-6 md:mt-0 hover:shadow-xl transition-shadow duration-300">
             <h2 className="text-2xl font-semibold mb-4">Jane Smith</h2>
-            <p className="text-sm text-gray-700 mb-4">"The trainers at Enrolify are top-notch. They provide the motivation and expertise I needed to push myself and achieve results I never thought possible."</p>
+            <p className="text-sm text-gray-700 mb-4">
+              <i className="fas fa-quote-left mr-2 text-purple-500"></i>
+              "The trainers at Enrolify are top-notch. They provide the motivation and expertise I needed to push myself and achieve results I never thought possible."
+            </p>
             <p className="text-sm text-purple-500">- Improved muscle tone and strength</p>
           </div>
-          <div className="md:w-1/3 p-6 shadow-lg bg-white rounded-lg mt-6 md:mt-0">
+
+          {/* Story 3 */}
+          <div className="md:w-1/3 p-8 shadow-lg bg-white rounded-xl mt-6 md:mt-0 hover:shadow-xl transition-shadow duration-300">
             <h2 className="text-2xl font-semibold mb-4">Sam Wilson</h2>
-            <p className="text-sm text-gray-700 mb-4">"Thanks to Enrolify, I have a newfound confidence and energy. The community is incredibly supportive, and the facilities are top-of-the-line."</p>
+            <p className="text-sm text-gray-700 mb-4">
+              <i className="fas fa-quote-left mr-2 text-purple-500"></i>
+              "Thanks to Enrolify, I have a newfound confidence and energy. The community is incredibly supportive, and the facilities are top-of-the-line."
+            </p>
             <p className="text-sm text-purple-500">- Increased endurance and vitality</p>
           </div>
         </div>
       </div>
+
 
       {/* Featured Classes */}
       <div className="py-10 px-16">
