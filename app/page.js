@@ -141,12 +141,30 @@ export default function Home() {
       </div>
 
       {/* Scroll to Top Button */}
+
       <div className="fixed bottom-4 right-4">
-        
-        <a href="#" className="bg-red-200 p-2 rounded-full ">
-          get up
+        <a
+          href="#"
+          className="bg-purple-500 text-white p-3 rounded-full shadow-lg flex items-center justify-center hover:bg-purple-700 transition-all"
+          title="Scroll to Top"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            className="w-6 h-6"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="M5 15l7-7 7 7"
+            />
+          </svg>
         </a>
       </div>
+
 
       {/* Footer */}
       <footer className="bg-gray-800 text-white py-10">
