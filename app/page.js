@@ -142,7 +142,8 @@ export default function Home() {
 
       {/* Scroll to Top Button */}
       <div className="fixed bottom-4 right-4">
-        <a href="#" className="bg-red-200 p-2 rounded-full hover:underline">
+        
+        <a href="#" className="bg-red-200 p-2 rounded-full ">
           get up
         </a>
       </div>
