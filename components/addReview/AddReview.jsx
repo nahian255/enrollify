@@ -4,36 +4,37 @@ import { useState } from "react";
 const AddReview = () => {
     const [name, setName] = useState("");
     const [review, setReview] = useState("");
+    // console.log(name,review)
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-
         // Prepare the data to send
         const reviewData = {
             name: name,
             review: review,
         };
+        console.log(reviewData,'addreview page')
 
         // Send the data to the server
-        try {
-            const response = await fetch("/api/reviews", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                },
-                body: JSON.stringify(reviewData),
-            });
+        // try {
+        //     const response = await fetch("/api/reviews", {
+        //         method: "POST",
+        //         headers: {
+        //             "Content-Type": "application/json",
+        //         },
+        //         body: JSON.stringify(reviewData),
+        //     });
 
-            if (response.ok) {
-                console.log("Review submitted successfully");
-                setName("");  // Clear the form after submission
-                setReview("");
-            } else {
-                console.error("Failed to submit the review");
-            }
-        } catch (error) {
-            console.error("An error occurred:", error);
-        }
+        //     if (response.ok) {
+        //         console.log("Review submitted successfully");
+        //         setName("");  // Clear the form after submission
+        //         setReview("");
+        //     } else {
+        //         console.error("Failed to submit the review");
+        //     }
+        // } catch (error) {
+        //     console.error("An error occurred:", error);
+        // }
     };
 
     return (
