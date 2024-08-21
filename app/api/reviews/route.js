@@ -1,9 +1,21 @@
 
-
-
-
 import connectDB from "@/lib/bdconnect";
 import UserReviewModel from "@/models/userReviewModel";
+
+// make all reviewes api 
+
+export async function GET (req){
+   await connectDB();
+   const review = await UserReviewModel.find().lean();
+
+   return new Response(JSON.stringify(review), {
+    headers: {
+        'Content-Type': 'application/json',
+        'Cache-Control': 'no-store' // Disable caching
+    }
+});
+
+}
 
 
 // save a review in the database 
