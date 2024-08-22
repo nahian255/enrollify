@@ -13,7 +13,7 @@ const AddReview = () => {
             name: name,
             review: review,
         };
-        console.log(reviewData,'addreview page')
+        // console.log(reviewData,'addreview page')
 
         // Send the data to the server
 

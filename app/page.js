@@ -88,6 +88,8 @@ export default function Home() {
         <h1 className="text-center text-4xl font-serif font-semibold mb-12">
           Success <span className="text-purple-500">Stories</span>
         </h1>
+
+        
         <div className="md:flex justify-center gap-10">
           {/* Story 1 */}
           <div className="md:w-1/3 p-8 shadow-lg bg-white rounded-xl hover:shadow-xl transition-shadow duration-300">
