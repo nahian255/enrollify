@@ -13,7 +13,7 @@ const page = async () => {
 
     const sFields = datas.map(course => course.s);
 
-    console.log(sFields);
+    // console.log(sFields);
 
     return (
         <div className='py-12'>
