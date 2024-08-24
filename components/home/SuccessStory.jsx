@@ -10,7 +10,6 @@ const SuccessStory = async () => {
 
     return (
         <div>
-            <h1> success page</h1>
             <div className="flex justify-around">
                 {reviewes.map((review, index) =>
                     // console.log(review)

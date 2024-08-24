@@ -89,9 +89,7 @@ export default function Home() {
         <h1 className="text-center text-4xl font-serif font-semibold mb-12">
           Success <span className="text-purple-500">Stories</span>
         </h1>
-
-        <SuccessStory></SuccessStory>
-        
+        <SuccessStory></SuccessStory>       
       </div>
 
 
