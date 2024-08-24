@@ -1,7 +1,6 @@
 export default function SuccessDetails({ name, review }) {
     return (
         <div className="md:flex justify-center items-center gap-4">
-            {/* Story */}
             <div className="shadow-lg bg-white rounded-xl hover:shadow-2xl transition-shadow duration-300 h-[200px] w-[360px] p-6">
                 <h2 className="text-2xl font-semibold mb-4 text-center text-purple-600">{name}</h2>
                 <p className="text-sm text-gray-700 mb-4 text-center italic">
