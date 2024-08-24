@@ -45,8 +45,8 @@ const SuccessStory = () => {
                 {currentReviews.map((review, index) => (
                     <SuccessDetails
                         key={index}
-                        name={review.name}
-                        review={review.review}
+                        name={review?.name}
+                        review={review?.review}
                     />
                 ))}
             </div>
@@ -54,14 +54,16 @@ const SuccessStory = () => {
                 <button
                     onClick={handlePrevPage}
                     disabled={currentPage === 0}
-                    className="px-4 py-2 bg-purple-500 text-white rounded hover:bg-purple-700"
+                    className={`px-4 py-2 text-white rounded hover:bg-purple-700 ${currentPage === 0 ? 'bg-red-500 cursor-not-allowed hover:bg-red-700' : 'bg-purple-500'
+                        }`}
                 >
                     Previous
                 </button>
                 <button
                     onClick={handleNextPage}
                     disabled={endIndex >= reviews.length}
-                    className="px-4 py-2 bg-purple-500 text-white rounded hover:bg-purple-700"
+                    className={`px-4 py-2 text-white rounded hover:bg-purple-700 ${endIndex >= reviews.length? 'bg-red-500 cursor-not-allowed hover:bg-red-700' : 'bg-purple-500'
+                        }`}
                 >
                     Next
                 </button>
