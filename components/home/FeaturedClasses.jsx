@@ -1,7 +1,10 @@
+'use client'
 import CourseCard from "../courses/CourseCard";
+import { useState, useEffect } from 'react';
+
 
 const FeaturedClasses = ()=>{
-
+   
     const [reviews, setReviews] = useState([]);
     const [currentPage, setCurrentPage] = useState(0);
     const itemsPerPage = 3;
@@ -38,6 +41,7 @@ const FeaturedClasses = ()=>{
         }
     };
 
+    console.log(reviews, currentReviews, 'ff')
     return (
         <div className="text-center">
             <div className="flex justify-center gap-4">

@@ -6,6 +6,7 @@ import { PriceList } from "@/components/pricing/PriceList";
 import Link from "next/link";
 import SuccessStory from "@/components/home/SuccessStory";
 import CourseCard from "@/components/courses/CourseCard";
+import FeaturedClasses from "@/components/home/FeaturedClasses";
 
 export default function Home() {
   return (
@@ -100,7 +101,7 @@ export default function Home() {
           Featured <span className="text-purple-500">Classes</span>
         </h2>
 
-        <CourseCard/>
+       <FeaturedClasses/>
 
         {/* <div className="container mx-auto px-6 md:flex gap-10 md:justify-around">
           <div className="bg-white shadow-lg rounded-lg overflow-hidden mb-6 md:mb-0 md:w-1/3">
