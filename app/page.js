@@ -5,6 +5,7 @@ import img3 from "@/public/fit-Icon.jpg";
 import { PriceList } from "@/components/pricing/PriceList";
 import Link from "next/link";
 import SuccessStory from "@/components/home/SuccessStory";
+import CourseCard from "@/components/courses/CourseCard";
 
 export default function Home() {
   return (
@@ -98,7 +99,10 @@ export default function Home() {
         <h2 className="text-center text-4xl font-serif font-semibold mb-8">
           Featured <span className="text-purple-500">Classes</span>
         </h2>
-        <div className="container mx-auto px-6 md:flex gap-10 md:justify-around">
+
+        <CourseCard/>
+
+        {/* <div className="container mx-auto px-6 md:flex gap-10 md:justify-around">
           <div className="bg-white shadow-lg rounded-lg overflow-hidden mb-6 md:mb-0 md:w-1/3">
             <img src="/path-to-class-image1.jpg" alt="Class 1" className="w-full h-48 object-cover" />
             <div className="p-6">
@@ -123,7 +127,7 @@ export default function Home() {
               <a href="#" className="text-purple-500 hover:underline">Learn more</a>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
 
       {/* Scroll to Top Button */}
