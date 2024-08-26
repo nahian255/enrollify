@@ -100,35 +100,9 @@ export default function Home() {
         <h2 className="text-center text-4xl font-serif font-semibold mb-8">
           Featured <span className="text-purple-500">Classes</span>
         </h2>
-
+        {/* this is show all the top courses  */}
        <FeaturedClasses/>
 
-        {/* <div className="container mx-auto px-6 md:flex gap-10 md:justify-around">
-          <div className="bg-white shadow-lg rounded-lg overflow-hidden mb-6 md:mb-0 md:w-1/3">
-            <img src="/path-to-class-image1.jpg" alt="Class 1" className="w-full h-48 object-cover" />
-            <div className="p-6">
-              <h3 className="text-xl font-semibold mb-2">Yoga</h3>
-              <p className="text-gray-700 mb-4">Improve your flexibility and reduce stress with our expert-led yoga classes.</p>
-              <a href="#" className="text-purple-500 hover:underline">Learn more</a>
-            </div>
-          </div>
-          <div className="bg-white shadow-lg rounded-lg overflow-hidden mb-6 md:mb-0 md:w-1/3">
-            <img src="/path-to-class-image2.jpg" alt="Class 2" className="w-full h-48 object-cover" />
-            <div className="p-6">
-              <h3 className="text-xl font-semibold mb-2">HIIT</h3>
-              <p className="text-gray-700 mb-4">Boost your cardiovascular fitness and burn calories with high-intensity interval training.</p>
-              <a href="#" className="text-purple-500 hover:underline">Learn more</a>
-            </div>
-          </div>
-          <div className="bg-white shadow-lg rounded-lg overflow-hidden mb-6 md:mb-0 md:w-1/3">
-            <img src="/path-to-class-image3.jpg" alt="Class 3" className="w-full h-48 object-cover" />
-            <div className="p-6">
-              <h3 className="text-xl font-semibold mb-2">Zumba</h3>
-              <p className="text-gray-700 mb-4">Join the party with fun, dance-based Zumba classes that keep you moving and grooving.</p>
-              <a href="#" className="text-purple-500 hover:underline">Learn more</a>
-            </div>
-          </div>
-        </div> */}
       </div>
 
       {/* Scroll to Top Button */}
