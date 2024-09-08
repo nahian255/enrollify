@@ -60,7 +60,7 @@ const FeaturedClasses = ()=>{
                 <button
                     onClick={handlePrevPage}
                     disabled={currentPage === 0}
-                    className={`px-1 text-white text-xs rounded hover:bg-purple-700 ${currentPage === 0 ? 'bg-red-500 cursor-not-allowed hover:bg-red-700' : 'bg-purple-500'
+                    className={`px-2 py-1 text-sm text-white  rounded hover:bg-purple-700 ${currentPage === 0 ? 'bg-red-500 cursor-not-allowed hover:bg-red-700' : 'bg-purple-500'
                         }`}
                 >
                     Previous
@@ -68,7 +68,7 @@ const FeaturedClasses = ()=>{
                 <button
                     onClick={handleNextPage}
                     disabled={endIndex >= reviews.length}
-                    className={`px-4 py-2 text-white rounded hover:bg-purple-700 ${endIndex >= reviews.length? 'bg-red-500 cursor-not-allowed hover:bg-red-700' : 'bg-purple-500'
+                    className={`px-2 py-1 text-sm text-white rounded hover:bg-purple-700 ${endIndex >= reviews.length? 'bg-red-500 cursor-not-allowed hover:bg-red-700' : 'bg-purple-500'
                         }`}
                 >
                     Next

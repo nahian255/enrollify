@@ -79,7 +79,7 @@ export default function Home() {
           <p className="py-6">
             Join our community and start your journey towards a healthier and happier life. We offer personalized fitness plans, expert guidance, and a supportive environment to help you achieve your goals.
           </p>
-          <Button>Join Now</Button>
+          <Link href={'/course'}> <Button>Join Now</Button> </Link>
         </div>
       </div>
 
