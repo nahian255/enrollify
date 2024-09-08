@@ -1,7 +1,8 @@
 import Button from "@/components/home/Button";
 import Image from "next/image";
-import img2 from "@/public/fitness.jpg";
+import img2 from "@/public/runningMan.jpg";
 import img3 from "@/public/fit-Icon.jpg";
+import img4 from '@/public/Image4.jpg'
 import { PriceList } from "@/components/pricing/PriceList";
 import Link from "next/link";
 import SuccessStory from "@/components/home/SuccessStory";
