@@ -41,7 +41,7 @@ const FeaturedClasses = ()=>{
         }
     };
 
-    console.log(reviews, currentReviews, 'ff')
+    // console.log(reviews, currentReviews, 'ff')
     return (
         <div className="text-center">
             <div className="flex justify-center gap-4">
@@ -56,11 +56,11 @@ const FeaturedClasses = ()=>{
                  />
                 ))}
             </div>
-            <div className="flex justify-center mt-4 gap-4">
+            <div className="flex justify-center mt-4 gap-6">
                 <button
                     onClick={handlePrevPage}
                     disabled={currentPage === 0}
-                    className={`px-4 py-2 text-white rounded hover:bg-purple-700 ${currentPage === 0 ? 'bg-red-500 cursor-not-allowed hover:bg-red-700' : 'bg-purple-500'
+                    className={`px-1 text-white text-xs rounded hover:bg-purple-700 ${currentPage === 0 ? 'bg-red-500 cursor-not-allowed hover:bg-red-700' : 'bg-purple-500'
                         }`}
                 >
                     Previous
