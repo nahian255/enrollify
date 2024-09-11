@@ -3,6 +3,8 @@ import Image from "next/image";
 import img2 from "@/public/runningMan.jpg";
 import img3 from "@/public/fit-Icon.jpg";
 import img4 from '@/public/Image4.jpg'
+import img5 from '@/public/Image5.jpg'
+import img6 from '@/public/Image6.jpg'
 import { PriceList } from "@/components/pricing/PriceList";
 import Link from "next/link";
 import SuccessStory from "@/components/home/SuccessStory";
@@ -71,7 +73,7 @@ export default function Home() {
       {/* Get Started */}
       <div className="md:flex px-10 my-14">
         <div className="w-1/2 flex justify-center">
-          <Image src={img2} height={260} width={500} alt="Fitness" />
+          <Image src={img6} height={260} width={400} alt="Fitness" />
         </div>
         <div className="w-1/2 flex flex-col justify-center p-8">
           <h1 className="text-4xl font-serif font-semibold">
