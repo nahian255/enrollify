@@ -39,7 +39,7 @@ const AddReview = () => {
     };
 
     return (
-        <div className="max-w-md mx-auto p-16 bg-white shadow-md rounded-lg">
+        <div className="max-w-md mx-auto p-16 bg-white shadow-2xl rounded-lg">
            
             <form onSubmit={handleSubmit}>
                 <div className="mb-4">
