@@ -44,22 +44,22 @@ export default function Home() {
           </p>
         </div>
         <div className="flex justify-center py-">
-          <div className="md:flex justify-evenly w-4/5 h-40 bg-purple-500 rounded-xl">
-            <div className="content-center flex items-center gap-4 px-5 text-white">
+          <div className="md:flex justify-evenly gap-4 md:w-4/5 md:h-40 bg-purple-500 rounded-xl">
+            <div className="content-center flex items-center md:gap-4 gap-10 px-5 text-white">
               <Image src={img3} width={60} alt="Healthy Life" />
               <div>
                 <h1 className="text-lg">Healthy Life</h1>
                 <p className="text-xs">Maintain a balanced lifestyle with regular exercise and a healthy diet.</p>
               </div>
             </div>
-            <div className="content-center flex items-center gap-4 text-white">
+            <div className="content-center flex items-center md:gap-4 gap-10 text-white">
               <Image src={img3} width={60} alt="Increased Energy" />
               <div>
                 <h1 className="text-lg">Increased Energy</h1>
                 <p className="text-xs">Boost your energy levels and stay active throughout the day.</p>
               </div>
             </div>
-            <div className="content-center flex items-center gap-4 text-white">
+            <div className="content-center flex items-center md:gap-4 gap-10 text-white">
               <Image src={img3} width={60} alt="Better Mood" />
               <div>
                 <h1 className="text-lg">Better Mood</h1>
