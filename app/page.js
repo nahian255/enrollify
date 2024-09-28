@@ -34,17 +34,17 @@ export default function Home() {
       </header>
 
       {/* Benefits */}
-      <div className="mt-20 py-">
+      <div className="mt-20 py- bg-slate-300">
         <h1 className="text-center text-4xl font-serif font-semibold">
           Benefits of <span className="text-purple-500">Exercise</span>
         </h1>
-        <div className="flex justify-center">
-          <p className="text-center text-sm py-5 w-1/2">
+        <div className="flex justify-center bg-yellow-200">
+          <p className="text-center text-xs md:text-sm py-5 md:w-1/2">
             Discover the myriad benefits of regular exercise, from improved mental health to increased physical strength and endurance.
           </p>
         </div>
-        <div className="flex justify-center py-">
-          <div className="md:flex justify-evenly gap-4 md:w-4/5 md:h-40 bg-purple-500 rounded-xl">
+        <div className="flex justify-center py- bg-red-200">
+          <div className="md:flex justify-evenly gap-4 md:w-4/5 h-auto md:h-40 bg-purple-500 rounded-xl">
             <div className="content-center flex items-center md:gap-4 gap-10 px-5 text-white">
               <Image src={img3} width={60} alt="Healthy Life" />
               <div>
@@ -60,7 +60,7 @@ export default function Home() {
               </div>
             </div>
             <div className="content-center flex items-center md:gap-4 gap-10 text-white">
-              <Image src={img3} width={60} alt="Better Mood" />
+              <Image src={img3} width={60} alt="Better Mood that possible only for exersice" />
               <div>
                 <h1 className="text-lg">Better Mood</h1>
                 <p className="text-xs">Experience an improved mood and reduced stress through regular workouts.</p>
